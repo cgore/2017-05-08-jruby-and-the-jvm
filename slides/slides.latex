@@ -220,12 +220,32 @@
 \end{slide}
 
 
+\begin{slide}
+  \h{JRuby is Ruby, on the JVM.}
+
+  \fullSlideImage{jruby-bird.eps}
+\end{slide}
+
 
 \begin{slide}
-  \h{So why do we want the JVM?
-    Because there's tons of great libraries for everything.}
+  \h{Ruby on the JVM?\\
+    Why would we want Ruby on the JVM?}
+
+  \fullSlideImage{java-yoda.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{Because there's tons of great libraries for everything.}
 
   \fullSlideImage{shave-that-yak.eps}
+\end{slide}
+
+
+\begin{slide}
+  \h{I found this image on the internet that describes very accurately how JRuby works.}
+
+  \fullSlideImage{jruby_compiler_monster.eps}
 \end{slide}
 
 
