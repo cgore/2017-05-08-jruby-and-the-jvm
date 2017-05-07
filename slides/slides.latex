@@ -239,7 +239,7 @@
   \h{Because there's tons of great libraries for everything.}
 
   \fullSlideImage{shave-that-yak.eps}
-\end{slide}
+l\end{slide}
 
 
 \begin{slide}
@@ -248,6 +248,104 @@
   \fullSlideImage{jruby_compiler_monster.eps}
 \end{slide}
 
+
+\begin{slide}
+  \h{Getting Started}
+
+  \begin{enumerate}
+  \item Download it from \texttt{http://jruby.org/download}\\
+    \textellipsis or \texttt{brew install jruby} on OS X\\
+    \textellipsis or \texttt{rvm install jruby} if you use RVM
+  \item Run \texttt{jruby} from your shell
+  \item Make code!
+  \end{enumerate}
+\end{slide}
+
+
+\begin{slide}
+  \h{CON: The JVM takes forever to start up}
+
+\begin{verbatim}
+chris@nephesh ~ $ time jruby -e "puts 'hi'"
+hi
+
+real	0m1.761s
+user	0m4.800s
+sys	0m0.235s
+chris@nephesh ~ $ time ruby -e "puts 'hi'"
+hi
+
+real	0m0.595s
+user	0m0.054s
+sys	0m0.050s
+\end{verbatim}
+\end{slide}
+
+
+\begin{slide}
+  \h{CON: Until the JIT kicks in it's actually considerably slower than MRI.}
+\end{slide}
+
+
+\begin{slide}
+  \h{CON: Even after the JIT kicks in, it's not really that much faster.}
+\end{slide}
+
+
+\begin{slide}
+  \h{CON: THE JVM WANTS ALL OF YOUR RAM AND IT WANTS IT NOW.}
+
+\begin{verbatim}
+%CPU %MEM      VSZ    RSS  COMMAND
+ 0.0  0.1  2475044   9300  ruby -e sleep 60
+%CPU %MEM      VSZ    RSS  COMMAND
+ 0.0  1.0  8325372 164520  ... org.jruby.Main -e sleep 60
+\end{verbatim}
+
+VSZ: virtual memory size, all memory that the process can access, including
+memory that is swapped out and memory that is from shared libraries.
+
+RSS: resident set size, how much memory is allocated to that process and is in RAM.
+\end{slide}
+
+
+\begin{slide}
+  \h{No (practical) C extension support, just FFI and Java stuff.}
+\end{slide}
+
+
+\begin{slide}
+  \h{PRO: It's often faster than MRI.}
+
+  \fullSlideImage{rubykon_2_speedup1.eps}
+  
+  {\tiny\texttt{https://pragtob.wordpress.com\\
+      /2017/01/24/benchmarking-a-go-ai-in-ruby-cruby-vs-rubinius-vs-jruby-vs-truffle-a-year-later/}}
+\end{slide}
+
+
+\begin{slide}
+  \h{\textellipsis Although, nowhere near as fast as TruffleRuby apparently,
+    also on the JVM.}
+
+  \fullSlideImage{truffleruby.eps}
+
+  {\tiny\texttt{http://chrisseaton.com/rubytruffle/}}
+\end{slide}
+
+
+\begin{slide}
+  \h{So let's just use TruffleRuby, right?}
+
+  \begin{itemize}
+  \item No OpenSSL support
+  \item No Nokogiri
+  \item No ActiveRecord device drivers
+  \item Only some of the Rails test suite passes
+  \end{itemize}
+
+  Maybe in a few years?
+\end{slide}
 
 
 \begin{slide}
