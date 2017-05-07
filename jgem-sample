@@ -1,0 +1,12 @@
+#! /usr/bin/env jruby
+# -*- mode: ruby -*-
+require 'nokogiri'
+doc  = Nokogiri::XML \
+         "<root>
+           <aliens>
+             <alien>
+               <name>Alf</name>
+             </alien>
+           </aliens>
+         </root>"
+puts doc.xpath("//name").first.content # Alf

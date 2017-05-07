@@ -349,6 +349,39 @@ RSS: resident set size, how much memory is allocated to that process and is in R
 
 
 \begin{slide}
+  \h{So let's stay with JRuby for now.\\
+  You can run (nearly) any normal Ruby code.}
+
+\begin{verbatim}
+chris@nephesh ~ $ jruby -e '5.times {|i| puts "hi #{i}"}'
+hi 0
+hi 1
+hi 2
+hi 3
+hi 4
+\end{verbatim}
+\end{slide}
+
+
+\begin{slide}
+  \h{It's easy to use use in scripts.}
+
+  \lstinputlisting{../hello-jvm}
+\end{slide}
+
+
+\begin{slide}
+  \h{Most Ruby gems are available and work.}
+
+\begin{verbatim}
+chris@nephesh ~ $ jgem install nokogiri
+\end{verbatim}
+
+  \lstinputlisting{../jgem-sample}
+\end{slide}
+
+
+\begin{slide}
   \SlideSection{Questions?}
 \end{slide}
 
