@@ -239,7 +239,7 @@
   \h{Because there's tons of great libraries for everything.}
 
   \fullSlideImage{shave-that-yak.eps}
-l\end{slide}
+\end{slide}
 
 
 \begin{slide}
@@ -266,13 +266,13 @@ l\end{slide}
   \h{CON: The JVM takes forever to start up}
 
 \begin{verbatim}
-chris@nephesh ~ $ time jruby -e "puts 'hi'"
+$ time jruby -e "puts 'hi'"
 hi
 
 real	0m1.761s
 user	0m4.800s
 sys	0m0.235s
-chris@nephesh ~ $ time ruby -e "puts 'hi'"
+$ time ruby -e "puts 'hi'"
 hi
 
 real	0m0.595s
@@ -353,7 +353,7 @@ RSS: resident set size, how much memory is allocated to that process and is in R
   You can run (nearly) any normal Ruby code.}
 
 \begin{verbatim}
-chris@nephesh ~ $ jruby -e '5.times {|i| puts "hi #{i}"}'
+$ jruby -e '5.times {|i| puts "hi #{i}"}'
 hi 0
 hi 1
 hi 2
@@ -374,10 +374,37 @@ hi 4
   \h{Most Ruby gems are available and work.}
 
 \begin{verbatim}
-chris@nephesh ~ $ jgem install nokogiri
+$ jgem install nokogiri
 \end{verbatim}
 
   \lstinputlisting{../jgem-sample}
+\end{slide}
+
+
+\begin{slide}
+  \h{Let's play with Java.}
+
+  \lstinputlisting{../swing-hello}
+\end{slide}
+
+
+\begin{slide}
+  \h{But I've got my own really awesome Java code that there's no way I'd ever
+    be able to reimplement in Ruby, it's just too awesome.}
+
+  \lstinputlisting[language=Java]{../HelloWorld.java}
+
+\begin{verbatim}
+$ javac HelloWorld.java
+$ jar cvfe HelloWorld.jar HelloWorld HelloWorld.class
+\end{verbatim}
+\end{slide}
+
+
+\begin{slide}
+  \h{Don't worry, we can get to it.}
+
+  \lstinputlisting{../my-jar}
 \end{slide}
 
 

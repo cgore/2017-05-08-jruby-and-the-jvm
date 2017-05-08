@@ -1,0 +1,5 @@
+#! /usr/bin/env jruby
+# -*- mode: ruby -*-
+require 'java'
+require './HelloWorld.jar'
+Java::HelloWorld.main [""]

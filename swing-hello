@@ -1,0 +1,12 @@
+#! /usr/bin/env jruby
+# -*- mode: ruby -*-
+require 'java' # you want Java
+# Java classes
+frame = javax.swing.JFrame.new "Window"
+label = javax.swing.JLabel.new "Hello"
+# Java methods
+frame.add label
+frame.setDefaultCloseOperation \
+        javax.swing.JFrame::EXIT_ON_CLOSE
+frame.pack
+frame.setVisible true
