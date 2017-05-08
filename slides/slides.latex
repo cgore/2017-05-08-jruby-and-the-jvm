@@ -463,6 +463,18 @@ $ jrubyc --javac ruby_foo.rb
 
 
 \begin{slide}
+  \h{What does this mean?}
+
+  \begin{itemize}
+  \item We can write a Ruby on Rails app \textellipsis
+  \item And then move it over to JRuby on the JVM \textellipsis
+  \item And then have real multi-threading \textellipsis
+  \item And have Clojure libraries that we can use within our Rails app.
+  \end{itemize}
+\end{slide}
+
+
+\begin{slide}
   \SlideSection{Questions?}
 \end{slide}
 
