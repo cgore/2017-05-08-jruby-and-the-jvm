@@ -409,7 +409,47 @@ $ jar cvfe HelloWorld.jar HelloWorld HelloWorld.class
 
 
 \begin{slide}
+  \h{But.Java.Classes.Are.Namespaced.Forever.Deep}
+
+  \lstinputlisting{../short-names}
+\end{slide}
+
+
+\begin{slide}
+  \h{You don't need sillyCamelCaseNonsense or getThatThing or setThatThing.}
+
+  \begin{tabular}{lr}
+    \texttt{x.getSomething}            & \texttt{x.something} \\
+    \texttt{x.setSomething(newValue)}  & \texttt{x.something = new\_value} \\
+    \texttt{x.isSomething}             & \texttt{x.something?}
+  \end{tabular}
+\end{slide}
+
+
+\begin{slide}
+  \h{So our code looks a lot more reasonable now.}
+
+  \lstinputlisting{../de-ugly}
+\end{slide}
+
+
+\begin{slide}
+  \h{You can implement Java interfaces with Ruby classes.}
+
+\begin{lstlisting}
+class SomeJRuby
+  include java.lang.Runnable
+  include java.lang.Comparable
+
+  # ... do stuff ...
+end
+\end{lstlisting}
+\end{slide}
+
+
+\begin{slide}
   \SlideSection{Questions?}
 \end{slide}
+
 
 \end{document}
