@@ -366,7 +366,7 @@ hi 4
 \begin{slide}
   \h{It's easy to use use in scripts.}
 
-  \lstinputlisting{../hello-jvm}
+  \lstinputlisting{../src/hello-jvm}
 \end{slide}
 
 
@@ -377,14 +377,14 @@ hi 4
 $ jgem install nokogiri
 \end{verbatim}
 
-  \lstinputlisting{../jgem-sample}
+  \lstinputlisting{../src/jgem-sample}
 \end{slide}
 
 
 \begin{slide}
   \h{Let's play with Java.}
 
-  \lstinputlisting{../swing-hello}
+  \lstinputlisting{../src/swing-hello}
 \end{slide}
 
 
@@ -392,7 +392,7 @@ $ jgem install nokogiri
   \h{But I've got my own really awesome Java code that there's no way I'd ever
     be able to reimplement in Ruby, it's just too awesome.}
 
-  \lstinputlisting[language=Java]{../HelloWorld.java}
+  \lstinputlisting[language=Java]{../src/HelloWorld.java}
 
 \begin{verbatim}
 $ javac HelloWorld.java
@@ -404,14 +404,14 @@ $ jar cvfe HelloWorld.jar HelloWorld HelloWorld.class
 \begin{slide}
   \h{Don't worry, we can get to it.}
 
-  \lstinputlisting{../my-jar}
+  \lstinputlisting{../src/my-jar}
 \end{slide}
 
 
 \begin{slide}
   \h{But.Java.Classes.Are.Namespaced.Forever.Deep}
 
-  \lstinputlisting{../short-names}
+  \lstinputlisting{../src/short-names}
 \end{slide}
 
 
@@ -429,7 +429,7 @@ $ jar cvfe HelloWorld.jar HelloWorld HelloWorld.class
 \begin{slide}
   \h{So our code looks a lot more reasonable now.}
 
-  \lstinputlisting{../de-ugly}
+  \lstinputlisting{../src/de-ugly}
 \end{slide}
 
 
@@ -451,7 +451,7 @@ end
   \h{\texttt{jrubyc}, for when you want to get to your JRuby from Java
     (or Clojure, or Scala, or \textellipsis)}
 
-  \lstinputlisting{../ruby_foo.rb}
+  \lstinputlisting{../src/ruby_foo.rb}
 
 \begin{verbatim}
 $ jrubyc --javac ruby_foo.rb
