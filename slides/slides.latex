@@ -448,6 +448,21 @@ end
 
 
 \begin{slide}
+  \h{\texttt{jrubyc}, for when you want to get to your JRuby from Java
+    (or Clojure, or Scala, or \textellipsis)}
+
+  \lstinputlisting{../ruby_foo.rb}
+
+\begin{verbatim}
+$ jrubyc --javac ruby_foo.rb
+\end{verbatim}
+
+  \h{Now there will be \texttt{Foo.java} and \texttt{Foo.class} files for you to
+    use in your other JVM stuff.}
+\end{slide}
+
+
+\begin{slide}
   \SlideSection{Questions?}
 \end{slide}
 
